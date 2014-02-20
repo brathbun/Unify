@@ -14,8 +14,9 @@
 | path to your installation.
 |
 */
-$config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
-$config['base_url'] .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';
+//$config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
+//$config['base_url'] .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';
+$config['base_url'] = 'http://localhost/github/Unify/';
 
 /*
 |--------------------------------------------------------------------------
@@ -280,7 +281,7 @@ $config['cookie_secure']	= FALSE;
 | COOKIE data is encountered
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------

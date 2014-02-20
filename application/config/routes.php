@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "home/index_controller";
 $route['404_override'] = '';
+$route['create-task'] = "home/index_controller/create_task";
 
 $route['(:any)'] = "home/$1";
 
