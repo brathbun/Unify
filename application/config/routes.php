@@ -38,11 +38,10 @@
 |
 */
 
-$route['home/(:any)'] = 'home/$1';
-
-$route['default_controller'] = "main";
+$route['default_controller'] = "home/index_controller";
 $route['404_override'] = '';
 
+$route['(:any)'] = "home/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
