@@ -1,52 +1,27 @@
+<!-- Main content -->
 <div id="container" class="large-12 columns">
 
-	<div class="row"><div class="large-6 large-centered columns"><h1>My To Do App</h1></div></div>
+	<div class="row"><div class="large-6 large-centered columns"><h2>Current listed events</h2></div></div>
 
-	<div class="row"><div class="large-6 large-centered columns"><h2>Add your task below</h2></div></div>
-
-	<form action="create-task" method="post" accept-charset="utf-8">
-		<div class="row">	
-			<div class="large-6 large-centered columns">
-				<?php echo form_label('Task:','task') . ' ' . form_input('task'); ?>
-			</div>
-		</div>
-		
-		<div class="row">	
-			<div class="large-6 large-centered columns">
-				<?php echo form_dropdown('category', $dropdown); ?>
-			</div>
-		</div>
-
-		<div class="row">	
-			<div class="large-6 large-centered columns">
-				<?php echo form_submit('submit','Add Task'); ?>
-			</div>
-		</div>
-
-		<div class="row">	
-			<div class="large-6 large-centered columns">
-				<?php echo form_error('task'); ?>
-	</form>
-	
-	<div id="tasks" class="row">
-		<div class="large-8 large-centered columns">
+	<div id="listevents" class="row">
+		<div class="large-6 large-centered columns">
 			<table>
 				<tr>    
-		          <th>Task</th>    
+		          <th>Event Name</th>    
 		          <th>Category</th>
 				</tr>
-				<?php if (!empty($info)) : ?>
-						<?php foreach ($info['task'] as $k=>$v) :?>
+				<?php if (!empty($events)) : ?>
+						<?php foreach ($events['eventname'] as $k=>$v) :?>
 						<tr>
 							<td><?php echo $v; ?></td>
-							<td><?php echo $info['category'][$k]; ?></td>
+							<td><?php echo $events['category'][$k]; ?></td>
 						</tr>
 						<?php endforeach; ?>
 				<?php else : ?>
-					<p>No tasks are available.</p>
+					<tr><td>No tasks are available.</td></tr>
 				<?php endif; ?>
 			</table>
 		</div>
 	</div>
-
 </div>
+<!-- Main Content Stop -->

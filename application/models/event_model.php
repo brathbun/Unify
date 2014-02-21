@@ -1,17 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class To_do_model extends CI_Model {
+class Event_model extends CI_Model {
 
-	public function get_tasks() {
+	public function get_events() {
 		$this->db->select('*');
-		$this->db->from('tasks');
-		$this->db->join('categories', 'categories.id = tasks.category_id', 'inner');
-		$this->db->order_by('tasks.id', 'asc');
+		$this->db->from('events');
+		$this->db->join('categories', 'categories.id = events.category_id', 'inner');
+		$this->db->order_by('events.id', 'asc');
 		$this->db->limit(25, 0); // 25 results, no offset
 		$query = $this->db->get();
-
+		$data = '';
 		foreach($query->result() as $v) {
-			$data['task'][] = $v->task;
+			$data['eventname'][] = $v->eventname;
 			$data['category'][] = $v->category;
 		}
 
@@ -28,8 +28,8 @@ class To_do_model extends CI_Model {
 		return $dropdown;
 	}
 
-	public function save_data($data) {
+	public function save_event($data) {
 		//Insert into DB
-		return $this->db->insert('tasks', $data);
+		return $this->db->insert('events', $data);
 	}
 }
