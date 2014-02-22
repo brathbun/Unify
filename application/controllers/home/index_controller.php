@@ -1,5 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+session_start();
+
 class Index_controller extends CI_Controller {
 
 	function __construct()
@@ -9,13 +11,21 @@ class Index_controller extends CI_Controller {
 
 	public function index()
 	{
+		if ($this->session->userdata('logged_in')) {
+			$session_data = $this->session->userdata('logged_in');
+			$data['username'] = $session_data['username'];
+		} else {
+			//If no session, redirect to login page
+			$data['username'] = 'Guest';
+		}
+
 		$this->load->model('event_model');
 		$data['events'] = $this->event_model->get_events();
 		$data['dropdown'] = $this->event_model->get_categories_dropdown();
 		$data['eventname_field'] = array(
-              'name'        => 'eventname',
-              'placeholder' => 'e.g. Rhadley\'s Sunday Night Hearthstone Event',
-            );
+	          'name'        => 'eventname',
+	          'placeholder' => 'e.g. Rhadley\'s Sunday Night Hearthstone Event',
+	        );
 
 		$data['main_content'] = 'home/index_view';
 		$this->load->view('templates/standard', $data);

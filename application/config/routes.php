@@ -41,8 +41,10 @@
 $route['default_controller'] = "home/index_controller";
 $route['404_override'] = '';
 $route['create-event'] = "home/index_controller/create_event";
+$route['verifyLogin'] = "user/verifyLogin";
 
 $route['(:any)'] = "home/$1";
+$route['(:any)'] = "user/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
