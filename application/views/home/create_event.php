@@ -3,15 +3,16 @@
 
 	<div class="row"><div class="large-6 large-centered columns"><h2>Add your event</h2></div></div>
 
-	<form action="create-event" method="post" accept-charset="utf-8">
+	<form data-abide action="createEvent" method="post" accept-charset="utf-8">
 		<div class="row">	
 			<div class="large-6 large-centered columns">
 				<div class="row collapse">
-					<div class="small-9 large-centered columns">
-						<?php echo form_input($eventname_field); ?>
-					</div>
 					<div class="small-3 large-centered columns">
-						<span class="postfix radius">Event Name</span>
+						<span class="prefix radius">Event Name</span>
+					</div>
+					<div class="small-9 large-centered columns">
+						<input type="text" required name="eventname" placeholder="e.g. Rhadley's Sunday Night Hearthstone Event" maxlength="100">
+						<small class="error">Username is required.</small>	
 					</div>
 				</div>
 			</div>
@@ -20,27 +21,21 @@
 		<div class="row">	
 			<div class="large-6 large-centered columns">
 				<div class="row collapse">
+					<div class="small-3 large-centered columns">
+						<span class="prefix radius">Game Type</span>
+					</div>
 					<div class="small-9 large-centered columns">
 						<?php echo form_dropdown('category', $dropdown); ?>
-					</div>
-					<div class="small-3 large-centered columns">
-						<span class="postfix radius">Game Type</span>
 					</div>
 				</div>		
 			</div>
 		</div>
 
-		<div class="row">	
-			<div class="large-6 large-centered columns">
-				<?php echo form_submit('submit','Add Event'); ?>
-			</div>
-		</div>
+		<div class="row"><div class="large-3 large-centered columns">
+			<button type="submit">Submit it to the World!</button>
+		</div></div>	
 
-		<div class="row">	
-			<div class="large-8 large-centered columns">
-				<?php echo form_error('event'); ?>
-			</div>
-		</div>
+
 	</form>
 	
 	<div id="listevents" class="row">
@@ -63,5 +58,6 @@
 			</table>
 		</div>
 	</div>
+
 </div>
 <!-- Main Content Stop -->

@@ -1,7 +1,8 @@
 <!-- Main content -->
 <div id="container" class="large-12 columns">
 
-	<div class="row"><div class="large-6 large-centered columns"><h2>Current listed events</h2></div></div>
+	<div class="row"><div class="large-6 large-centered columns"><h3>Welcome <?php echo $username ?>!</h3></div></div>
+	<div class="row"><div class="large-6 large-centered columns"><h5>Current listed events</h5></div></div>
 
 	<div id="listevents" class="row">
 		<div class="large-6 large-centered columns">

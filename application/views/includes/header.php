@@ -13,6 +13,7 @@
     <script src="<?php echo base_url(); ?>js/vendor/jquery.js"></script>
     <script src="<?php echo base_url(); ?>js/vendor/fastclick.js"></script>
     <script src="<?php echo base_url(); ?>js/foundation.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/foundation.abide.js"></script>
 
   </head>
   <body>
