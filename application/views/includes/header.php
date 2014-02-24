@@ -7,13 +7,14 @@
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/foundation.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" />
     
     <script src="<?php echo base_url(); ?>js/vendor/modernizr.js"></script>
     <script src="<?php echo base_url(); ?>js/vendor/jquery.js"></script>
     <script src="<?php echo base_url(); ?>js/vendor/fastclick.js"></script>
     <script src="<?php echo base_url(); ?>js/foundation.min.js"></script>
     <script src="<?php echo base_url(); ?>js/foundation.abide.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/vss7rtm.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   </head>
   <body>

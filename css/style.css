@@ -1,2 +1,25 @@
 /* Main Stylesheet for the Rawcritics Unify Project */
 
+html { 
+	background: #fdeb0f; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body { 
+	background: none;
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+h3 { font-weight: 900; text-shadow: 1px 1px #9AAC17; }
+h2,h5 { font-weight: 100; text-shadow: 1px 1px #9AAC17; }
+table { font-weight: 100; }
+button { font-family: "museo-sans",sans-serif; text-shadow: 1px 1px #555; border-radius: 8px; }
+input[type="text"] { font-family: "museo-sans",sans-serif; font-weight: 900; font-size: 24px;}
+
+.top-bar .name h1 a { font-weight: 900; }
+.top-bar-section li:not(.has-form) a:not(.button) { font-weight: 100; }
